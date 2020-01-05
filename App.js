@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { StyleSheet, ScrollView, Image, FlatList, slides } from 'react-native';
+import { StyleSheet, ScrollView, Image, FlatList, slides, TouchableOpacity, Animated, View, SafeAreaView } from 'react-native';
 import { ApplicationProvider, IconRegistry, Layout, Text, TopNavigation, Card, Icon, Input, TopNavigationAction} from '@ui-kitten/components';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
 import { mapping, light as lightTheme } from '@eva-design/eva';
 import { default as appTheme } from './custom-theme.json';
+import Constants from 'expo-constants';
 
 const theme = { ...lightTheme, ...appTheme };
 
@@ -13,16 +14,135 @@ class Language extends Component {
   render() {
     if (!this.state.isVietnamese) {
       return (
+        <TouchableOpacity>
         <Card button onPress={() => this.setState({isVietnamese: true})} style={styles.engcard}>
           <Text>{this.props.EnText}</Text>
         </Card>
+        </TouchableOpacity>
       );
     }
 
     return (
+      <TouchableOpacity>
       <Card button onPress={() => this.setState({isVietnamese: false})} style={styles.vicard}>
         <Text>{this.props.VnText}</Text>
       </Card>
+      </TouchableOpacity>
+    );
+  }
+}
+var Texts = [
+  {
+    id: '1',
+    entext: 'English 1',
+    vitext: 'Vietnamese 1',
+    side : "en"
+  },
+  {
+    id: '2',
+    entext: 'English 2',
+    vitext: 'Vietnamese 2',
+    side : "en"
+  },
+  {
+    id: '3',
+    entext: 'English 3',
+    vitext: 'Vietnamese 3',
+    side : "en"
+  },
+];
+
+class AnimatedBasic extends Component {
+  componentWillMount() {
+    this.animatedValue = new Animated.Value(0);
+    this.value = 0;
+    this.animatedValue.addListener(({ value }) => {
+      this.value = value;
+    })
+    this.frontInterpolate = this.animatedValue.interpolate({
+      inputRange: [0, 180],
+      outputRange: ['0deg', '180deg'],
+    })
+    this.backInterpolate = this.animatedValue.interpolate({
+      inputRange: [0, 180],
+      outputRange: ['180deg', '360deg']
+    })
+    this.frontOpacity = this.animatedValue.interpolate({
+      inputRange: [89, 90],
+      outputRange: [1, 0]
+    })
+    this.backOpacity = this.animatedValue.interpolate({
+      inputRange: [89, 90],
+      outputRange: [0, 1]
+    })
+  }
+
+  flipCard(item) {
+    if (this.value >= 90) {
+      Animated.spring(this.animatedValue,{
+        toValue: 0,
+        friction: 8,
+        tension: 10
+      }).start();
+    } else {
+      Animated.spring(this.animatedValue,{
+        toValue: 180,
+        friction: 8,
+        tension: 10
+      }).start();
+    }
+  }
+  
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: Texts
+    };
+    global.slides = slides;
+  }
+
+  render() {
+    const frontAnimatedStyle = {
+      transform: [
+        { rotateY: this.frontInterpolate }
+      ]
+    }
+    const backAnimatedStyle = {
+      transform: [
+        { rotateY: this.backInterpolate }
+      ]
+    }
+    return (
+      <View style={styles.container}>
+        <FlatList data={Texts} renderItem={({ item : Item }) => { return (
+          <TouchableOpacity onPress={() => this.flipCard(Item)}>
+            <View>
+
+
+              <Animated.View button style={[styles.flipCard, frontAnimatedStyle, {opacity: this.frontOpacity}]}>
+                <Text style={styles.flipText}>
+                  {Item.entext} {Item.side}
+                </Text>
+              </Animated.View>
+
+              
+              <Animated.View button style={[styles.flipCard, styles.flipCardBack, backAnimatedStyle, {opacity: this.backOpacity}]}>
+                <Text style={styles.flipText}>
+                  {Item.vitext}
+                </Text>
+              </Animated.View>
+
+
+              
+            </View>
+          </TouchableOpacity>
+
+          );
+          }} keyExtractor={(item, index) => index.toString} /> 
+        
+
+      </View>
     );
   }
 }
@@ -80,7 +200,7 @@ class CategoryCards extends React.Component {
           
         );
       }}
-      keyExtractor={(item, index) => index}
+      keyExtractor={(item, index) => index.toString}
     />
     )
   }
@@ -123,32 +243,15 @@ const SearchBar =() => (
   <Input style={styles.searchinput} size='large' placeholder='Search Terms' value={value} onChangeText={setValue} icon={renderIcon}/>
 );
 
+
+
 const HomeScreen = () => (
   <Layout style={styles.home}>
       
       <ScrollView>
       
         <CategoryCards />
-        <Language VnText='Vietnamese 1' EnText='English 1' />
-        <Language VnText='Vietnamese 2' EnText='English 2' />
-        <Language VnText='Vietnamese 3' EnText='English 3' />
-        <Language VnText='Vietnamese 4' EnText='English 4' />
-        <Language VnText='Vietnamese 5' EnText='English 5' />
-        <Language VnText='Vietnamese 6' EnText='English 6' />
-        <Language VnText='Vietnamese 5' EnText='English 5' />
-        <Language VnText='Vietnamese 6' EnText='English 6' />
-        <Language VnText='Vietnamese 3' EnText='English 3' />
-        <Language VnText='Vietnamese 4' EnText='English 4' />
-        <Language VnText='Vietnamese 5' EnText='English 5' />
-        <Language VnText='Vietnamese 6' EnText='English 6' />
-        <Language VnText='Vietnamese 5' EnText='English 5' />
-        <Language VnText='Vietnamese 6' EnText='English 6' />
-        <Language VnText='Vietnamese 3' EnText='English 3' />
-        <Language VnText='Vietnamese 4' EnText='English 4' />
-        <Language VnText='Vietnamese 5' EnText='English 5' />
-        <Language VnText='Vietnamese 6' EnText='English 6' />
-        <Language VnText='Vietnamese 5' EnText='English 5' />
-        <Language VnText='Vietnamese 6' EnText='English 6' />
+        <AnimatedBasic />
       </ScrollView>
   </Layout>
 );
@@ -197,22 +300,33 @@ const styles = StyleSheet.create({
     width: 200,
     borderWidth: 0,
   },
-  engcard: {
-    marginVertical: 5,
+  flipCard: {
+    flex:1,
+    alignItems: 'stretch',
     marginHorizontal: 15,
-    borderRadius: 10,
-    shadowOpacity: 1,
-    borderWidth: 0,
-    color: 'red',
-  },
-  vicard: {
     marginVertical: 5,
-    marginHorizontal: 15,
+    padding: 15,
+    backgroundColor: 'white',
     borderRadius: 10,
-    shadowOpacity: 1,
-    borderWidth: 0,
-    color: '#5d87d3',
+    backfaceVisibility: 'hidden',
   },
+  flipCardBack: {
+    flex:1,
+    alignItems: 'stretch',
+    marginHorizontal: 15,
+    marginVertical: 5,
+    padding: 15,
+    backgroundColor: 'white',
+    borderRadius: 10,
+    backfaceVisibility: 'hidden',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+  },
+  flipText: {
+    fontSize: 20,
+  }
 });
 
 
