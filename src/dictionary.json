@@ -1,0 +1,77 @@
+[
+  {
+    id: '1',
+    entext: 'Hello Ajinomoto ',
+    vitext: 'hôm nay màu gì thế 1',
+  },
+  {
+    id: '2',
+    entext: 'What is your name',
+    vitext: 'Cháu lên ba cháu vô mẫu giáo',
+  },
+  {
+    id: '3',
+    entext: 'Hello. Is it me you are looking for?',
+    vitext: 'Hai con thằn lằn con',
+  },
+  {
+    id: '4',
+    entext: 'What is your name',
+    vitext: 'Cháu lên ba cháu vô mẫu giáo',
+  },
+  {
+    id: '5',
+    entext: 'Hello. Is it me you are looking for?',
+    vitext: 'Hai con thằn lằn con',
+  },
+  {
+    id: '6',
+    entext: 'What is your name',
+    vitext: 'Cháu lên ba cháu vô mẫu giáo',
+  },
+  {
+    id: '7',
+    entext: 'Hello. Is it me you are looking for?',
+    vitext: 'Hai con thằn lằn con',
+  },
+  {
+    id: '8',
+    entext: 'What is your name',
+    vitext: 'Cháu lên ba cháu vô mẫu giáo',
+  },
+  {
+    id: '9',
+    entext: 'Hello. Is it me you are looking for?',
+    vitext: 'Hai con thằn lằn con',
+  },
+  {
+    id: '10',
+    entext: 'What is your name',
+    vitext: 'Cháu lên ba cháu vô mẫu giáo',
+  },
+  {
+    id: '11',
+    entext: 'Hello. Is it me you are looking for?',
+    vitext: 'Hai con thằn lằn con',
+  },
+  {
+    id: '12',
+    entext: 'What is your name',
+    vitext: 'Cháu lên ba cháu vô mẫu giáo',
+  },
+  {
+    id: '13',
+    entext: 'Hello. Is it me you are looking for?',
+    vitext: 'Hai con thằn lằn con',
+  },
+  {
+    id: '14',
+    entext: 'Hello. Is it me you are looking for?',
+    vitext: 'Hai con thằn lằn con',
+  },
+  {
+    id: '15',
+    entext: 'Hello. Is it me you are looking for?',
+    vitext: 'Hai con thằn lằn con',
+  },
+]
