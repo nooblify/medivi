@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, FlatList,TouchableOpacity, View, ActivityIndicator, SafeAreaView} from 'react-native';
+import { StyleSheet, FlatList,TouchableOpacity, View, ActivityIndicator, SafeAreaView, Image } from 'react-native';
 import { ApplicationProvider, IconRegistry, Layout, Text, Card, Input, Icon , TopNavigation} from '@ui-kitten/components';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
 import { mapping, light as lightTheme } from '@eva-design/eva';
@@ -18,9 +18,14 @@ class Language extends Component {
       return (
         <TouchableOpacity>
         <Card button onPress={() => this.setState({isVietnamese: true})} style={styles.card}>
-          <Text style={styles.text}>
-            <Text style={{color:'#f95f93', fontSize: 20}}>EN | </Text> {this.props.EnText}
-          </Text>
+          <Layout style={styles.langcontainer}>
+            <Layout style={styles.langtagcontainer}>
+              <Text style={styles.langtag}>EN</Text>
+            </Layout>
+            <Layout style={styles.langtextcontainer}>
+              <Text style={styles.langtext}>{this.props.EnText}</Text>
+            </Layout>
+          </Layout>
         </Card>
         </TouchableOpacity>
       );
@@ -29,9 +34,14 @@ class Language extends Component {
     return (
       <TouchableOpacity>
       <Card button onPress={() => this.setState({isVietnamese: false})} style={styles.card}>
-      <Text style={styles.text}>
-            <Text style={{color:'#f95f93', fontSize: 20}}>VI | </Text> {this.props.VnText}
-          </Text>
+      <Layout style={styles.langcontainer}>
+        <Layout style={styles.langtagcontainer}>
+          <Text style={styles.langtag}>VI</Text>
+        </Layout>
+        <Layout style={styles.langtextcontainer}>
+          <Text style={styles.langtext}>{this.props.VnText}</Text>
+        </Layout>
+      </Layout>
       </Card>
       </TouchableOpacity>
     );
@@ -136,7 +146,7 @@ const App = () => (
       <View>
     <View style={styles.statusBar} />
       <TopNavigation
-      title='ALODI'
+      title='MEDIVI'
       alignment='center'
       titleStyle={styles.topnav}
     />
@@ -167,17 +177,37 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     fontSize: 18,
   },
-  text: {
-    fontSize: 18,
+  langtext: {
+    fontSize: 16,
+    lineHeight: 30,
+  },
+  langcontainer:{
+    flex: 1, 
+    flexDirection: 'row',
+  },
+  langtagcontainer: {
+    flex: 1,
+    alignItems:'center', 
+    paddingRight: 5, 
+    borderRightWidth: 2, 
+    borderRightColor: '#f95f93', 
+    marginRight:10,
+    justifyContent: 'center',
+  },
+  langtextcontainer: {
+    flex: 8,
+  },
+  langtag:{
+    color: '#f95f93',
+    fontSize: 20,
   },
   list: {
-    borderRadius: 20,
     marginBottom: 30,
   },
   card: {
-    marginHorizontal: 15,
-    marginVertical: 5,
     borderRadius: 20,
+    paddingRight: 10,
+    marginRight: 10,
   }
 });
 

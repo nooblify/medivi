@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "TravelApp",
-    "slug": "TravelApp",
+    "name": "Medivi",
+    "slug": "medivi",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [
@@ -11,9 +11,8 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logo.png",
     "splash": {
-      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -23,7 +22,12 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "android": {
+      "package": "com.nooblify.medivi",
+      "versionCode": 2
+    },
     "ios": {
+      "bundleIdentifier": "com.nooblify.medivi",
       "supportsTablet": true
     },
     "description": ""

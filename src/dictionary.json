@@ -1,77 +1,772 @@
 [
-  {
-    id: '1',
-    entext: 'Hello Ajinomoto ',
-    vitext: 'hôm nay màu gì thế 1',
-  },
-  {
-    id: '2',
-    entext: 'What is your name',
-    vitext: 'Cháu lên ba cháu vô mẫu giáo',
-  },
-  {
-    id: '3',
-    entext: 'Hello. Is it me you are looking for?',
-    vitext: 'Hai con thằn lằn con',
-  },
-  {
-    id: '4',
-    entext: 'What is your name',
-    vitext: 'Cháu lên ba cháu vô mẫu giáo',
-  },
-  {
-    id: '5',
-    entext: 'Hello. Is it me you are looking for?',
-    vitext: 'Hai con thằn lằn con',
-  },
-  {
-    id: '6',
-    entext: 'What is your name',
-    vitext: 'Cháu lên ba cháu vô mẫu giáo',
-  },
-  {
-    id: '7',
-    entext: 'Hello. Is it me you are looking for?',
-    vitext: 'Hai con thằn lằn con',
-  },
-  {
-    id: '8',
-    entext: 'What is your name',
-    vitext: 'Cháu lên ba cháu vô mẫu giáo',
-  },
-  {
-    id: '9',
-    entext: 'Hello. Is it me you are looking for?',
-    vitext: 'Hai con thằn lằn con',
-  },
-  {
-    id: '10',
-    entext: 'What is your name',
-    vitext: 'Cháu lên ba cháu vô mẫu giáo',
-  },
-  {
-    id: '11',
-    entext: 'Hello. Is it me you are looking for?',
-    vitext: 'Hai con thằn lằn con',
-  },
-  {
-    id: '12',
-    entext: 'What is your name',
-    vitext: 'Cháu lên ba cháu vô mẫu giáo',
-  },
-  {
-    id: '13',
-    entext: 'Hello. Is it me you are looking for?',
-    vitext: 'Hai con thằn lằn con',
-  },
-  {
-    id: '14',
-    entext: 'Hello. Is it me you are looking for?',
-    vitext: 'Hai con thằn lằn con',
-  },
-  {
-    id: '15',
-    entext: 'Hello. Is it me you are looking for?',
-    vitext: 'Hai con thằn lằn con',
-  },
+    {
+        "id": 1,
+        "entext": "Abdominal Migraine",
+        "vitext": "Đau nửa vùng bụng"
+    },
+    {
+        "id": 2,
+        "entext": "Abdominal pain",
+        "vitext": "Đau bụng"
+    },
+    {
+        "id": 3,
+        "entext": "Abnormal Pap Test",
+        "vitext": "Xét nghiệm tiền ung thư tử cung"
+    },
+    {
+        "id": 4,
+        "entext": "Abortion",
+        "vitext": "Phá thai"
+    },
+    {
+        "id": 5,
+        "entext": "Abscessed Tooth",
+        "vitext": "​Áp xe răng"
+    },
+    {
+        "id": 6,
+        "entext": "Achalasia",
+        "vitext": "Co thắt thực quản"
+    },
+    {
+        "id": 7,
+        "entext": "Acne",
+        "vitext": "Mụn"
+    },
+    {
+        "id": 8,
+        "entext": "Acquired immunodeficiency syndrome ",
+        "vitext": "Hội chứng suy giảm miễn dịch"
+    },
+    {
+        "id": 9,
+        "entext": "Aging",
+        "vitext": "Lão hóa"
+    },
+    {
+        "id": 10,
+        "entext": "Allergy",
+        "vitext": "Dị ứng"
+    },
+    {
+        "id": 11,
+        "entext": "Alzheimer's disease",
+        "vitext": "Hội chứng suy giảm trí nhớ"
+    },
+    {
+        "id": 12,
+        "entext": "Anal pain",
+        "vitext": "Đau hậu môn"
+    },
+    {
+        "id": 13,
+        "entext": "Anemia",
+        "vitext": "Thiếu máu"
+    },
+    {
+        "id": 14,
+        "entext": "Ankle pain",
+        "vitext": "Đau mắt cá chân"
+    },
+    {
+        "id": 15,
+        "entext": "Anosmia ",
+        "vitext": "Chứng mất khứu giác"
+    },
+    {
+        "id": 16,
+        "entext": "Appendicitis",
+        "vitext": "Viêm ruột thừa"
+    },
+    {
+        "id": 17,
+        "entext": "Arm pain",
+        "vitext": "Đau cánh tay"
+    },
+    {
+        "id": 18,
+        "entext": "Arthritis",
+        "vitext": "Viêm khớp"
+    },
+    {
+        "id": 19,
+        "entext": "Asthma",
+        "vitext": "Hen suyễn"
+    },
+    {
+        "id": 20,
+        "entext": "Astigmatism",
+        "vitext": "Loạn thị"
+    },
+    {
+        "id": 21,
+        "entext": "Autism",
+        "vitext": "Tự kỷ"
+    },
+    {
+        "id": 22,
+        "entext": "Avian Influenza",
+        "vitext": "Dịch cúm gia cầm"
+    },
+    {
+        "id": 23,
+        "entext": "Back Pain",
+        "vitext": "Đau lưng"
+    },
+    {
+        "id": 24,
+        "entext": "Birth Defects",
+        "vitext": "Dị tật bẩm sinh"
+    },
+    {
+        "id": 25,
+        "entext": "Blind",
+        "vitext": "Mù"
+    },
+    {
+        "id": 26,
+        "entext": "Blood clots",
+        "vitext": "Máu đông"
+    },
+    {
+        "id": 27,
+        "entext": "Breast lumps",
+        "vitext": "U vú"
+    },
+    {
+        "id": 28,
+        "entext": "Bronchitis",
+        "vitext": "Viêm phế quản"
+    },
+    {
+        "id": 29,
+        "entext": "Burn",
+        "vitext": "Bỏng"
+    },
+    {
+        "id": 30,
+        "entext": "Cancer",
+        "vitext": "Ung thư"
+    },
+    {
+        "id": 31,
+        "entext": "Cataracts",
+        "vitext": "Đục thủy tinh thể"
+    },
+    {
+        "id": 32,
+        "entext": "Chickenpox",
+        "vitext": "Thủy đậu"
+    },
+    {
+        "id": 33,
+        "entext": "Cholera",
+        "vitext": "Thổ tả / Dịch tả"
+    },
+    {
+        "id": 34,
+        "entext": "Cirrhosis",
+        "vitext": "Xơ gan"
+    },
+    {
+        "id": 35,
+        "entext": "Cold",
+        "vitext": "Cảm"
+    },
+    {
+        "id": 36,
+        "entext": "Cold hands",
+        "vitext": "Lạnh tay"
+    },
+    {
+        "id": 37,
+        "entext": "Color blindness",
+        "vitext": "Mù màu"
+    },
+    {
+        "id": 38,
+        "entext": "Coma",
+        "vitext": "Hôn mê"
+    },
+    {
+        "id": 39,
+        "entext": "Conjunctivitis (Pink Eye)",
+        "vitext": "Viêm kết mạc (Mắt đỏ)"
+    },
+    {
+        "id": 40,
+        "entext": "Coronary artery disease",
+        "vitext": "Bệnh động mạch vành"
+    },
+    {
+        "id": 41,
+        "entext": "Cough",
+        "vitext": "Ho"
+    },
+    {
+        "id": 42,
+        "entext": "Coughing up blood",
+        "vitext": "Ho ra máu"
+    },
+    {
+        "id": 43,
+        "entext": "Dark circles under eyes",
+        "vitext": "Quầng thâm mắt"
+    },
+    {
+        "id": 44,
+        "entext": "Deaf",
+        "vitext": "Điếc"
+    },
+    {
+        "id": 45,
+        "entext": "Dehydration",
+        "vitext": "Mất nước"
+    },
+    {
+        "id": 46,
+        "entext": "Dementia",
+        "vitext": "Bệnh sa sút trí tuệ"
+    },
+    {
+        "id": 47,
+        "entext": "Dengue fever",
+        "vitext": "Sốt xuất huyết"
+    },
+    {
+        "id": 48,
+        "entext": "Diabete",
+        "vitext": "Tiểu đường"
+    },
+    {
+        "id": 49,
+        "entext": "Diarrhea",
+        "vitext": "Tiêu chảy"
+    },
+    {
+        "id": 50,
+        "entext": "Diphtheria",
+        "vitext": "Bạch hầu"
+    },
+    {
+        "id": 51,
+        "entext": "Dizziness",
+        "vitext": "Chóng mặt"
+    },
+    {
+        "id": 52,
+        "entext": "Down's syndrome",
+        "vitext": "Bệnh Down"
+    },
+    {
+        "id": 53,
+        "entext": "Dry Eye",
+        "vitext": "Khô mắt"
+    },
+    {
+        "id": 54,
+        "entext": "Dry mouth",
+        "vitext": "Khô miệng"
+    },
+    {
+        "id": 55,
+        "entext": "Dry orgasm",
+        "vitext": "Cực khoái khô"
+    },
+    {
+        "id": 56,
+        "entext": "Dry skin",
+        "vitext": "Khô da"
+    },
+    {
+        "id": 57,
+        "entext": "Dyspnea (Shortness of breath)",
+        "vitext": "Khó thở"
+    },
+    {
+        "id": 58,
+        "entext": "Dysuria",
+        "vitext": "Khó tiểu"
+    },
+    {
+        "id": 59,
+        "entext": "Eczema",
+        "vitext": "Bệnh chàm"
+    },
+    {
+        "id": 60,
+        "entext": "Elbow pain",
+        "vitext": "Đau khuỷu tay"
+    },
+    {
+        "id": 61,
+        "entext": "Encephalitis",
+        "vitext": "Viêm não"
+    },
+    {
+        "id": 62,
+        "entext": "Epilepsy",
+        "vitext": "Động kinh"
+    },
+    {
+        "id": 63,
+        "entext": "Epiphora (Watery Eyes / Excess tearing)",
+        "vitext": "Chứng chảy nhiều nước mắt"
+    },
+    {
+        "id": 64,
+        "entext": "Erythrocytosis",
+        "vitext": "Bệnh đa hồng cầu"
+    },
+    {
+        "id": 65,
+        "entext": "Fatigue",
+        "vitext": "Mệt mỏi"
+    },
+    {
+        "id": 66,
+        "entext": "Fever",
+        "vitext": "Sốt"
+    },
+    {
+        "id": 67,
+        "entext": "Flatulence",
+        "vitext": "Đầy hơi"
+    },
+    {
+        "id": 68,
+        "entext": "Flu",
+        "vitext": "Cúm"
+    },
+    {
+        "id": 69,
+        "entext": "Food poisoning ",
+        "vitext": "Ngộ độc thực phẩm"
+    },
+    {
+        "id": 70,
+        "entext": "Frequent urination",
+        "vitext": "Đi tiểu nhiều lần"
+    },
+    {
+        "id": 71,
+        "entext": "Gallstones ",
+        "vitext": "Sỏi mật"
+    },
+    {
+        "id": 72,
+        "entext": "Genital wart",
+        "vitext": "Mụn cóc sinh dục"
+    },
+    {
+        "id": 73,
+        "entext": "Glaucoma",
+        "vitext": "Tăng nhãn áp"
+    },
+    {
+        "id": 74,
+        "entext": "Gonorrhea",
+        "vitext": "Bệnh lậu"
+    },
+    {
+        "id": 75,
+        "entext": "Gout",
+        "vitext": "Gút"
+    },
+    {
+        "id": 76,
+        "entext": "Green stool",
+        "vitext": "Đi ngoài phân xanh"
+    },
+    {
+        "id": 77,
+        "entext": "Groin pain (male)",
+        "vitext": "Đau háng ở nam"
+    },
+    {
+        "id": 78,
+        "entext": "Hand numbness",
+        "vitext": "Tê tay"
+    },
+    {
+        "id": 79,
+        "entext": "Headache",
+        "vitext": "Nhức đầu"
+    },
+    {
+        "id": 80,
+        "entext": "Heel pain",
+        "vitext": "Đau gót chân"
+    },
+    {
+        "id": 81,
+        "entext": "Hemorrhoids",
+        "vitext": "Bệnh trĩ"
+    },
+    {
+        "id": 82,
+        "entext": "Hepatitis",
+        "vitext": "Viêm gan"
+    },
+    {
+        "id": 83,
+        "entext": "Hepatitis A",
+        "vitext": "Viêm gan A"
+    },
+    {
+        "id": 84,
+        "entext": "Herniated Disk",
+        "vitext": "Thoát vị đĩa điệm"
+    },
+    {
+        "id": 85,
+        "entext": "High Blood Pressure",
+        "vitext": "Huyết áp cao"
+    },
+    {
+        "id": 86,
+        "entext": "High cholesterol",
+        "vitext": "Cholesterol cao"
+    },
+    {
+        "id": 87,
+        "entext": "Hyperkalemia (high potassium)",
+        "vitext": "Kali trong máu cao"
+    },
+    {
+        "id": 88,
+        "entext": "Hypoglycaemia (low blood sugar)",
+        "vitext": "Hạ đường huyết"
+    },
+    {
+        "id": 89,
+        "entext": "Infertility",
+        "vitext": "Hiếm muộn"
+    },
+    {
+        "id": 90,
+        "entext": "Insomnia ",
+        "vitext": "Mất ngủ"
+    },
+    {
+        "id": 91,
+        "entext": "Jaundice",
+        "vitext": "Vàng da"
+    },
+    {
+        "id": 92,
+        "entext": "Kidney stones ",
+        "vitext": "Sỏi thận"
+    },
+    {
+        "id": 93,
+        "entext": "Malaria",
+        "vitext": "Sốt rét"
+    },
+    {
+        "id": 94,
+        "entext": "Meningitis",
+        "vitext": "Viêm màng não"
+    },
+    {
+        "id": 95,
+        "entext": "Menstruation",
+        "vitext": "Kinh nguyệt"
+    },
+    {
+        "id": 96,
+        "entext": "Mononucleosis",
+        "vitext": "Bệnh bạch cầu"
+    },
+    {
+        "id": 97,
+        "entext": "Mumps",
+        "vitext": "Quai bị"
+    },
+    {
+        "id": 98,
+        "entext": "Nosebleed",
+        "vitext": "Chảy máu cam"
+    },
+    {
+        "id": 99,
+        "entext": "Numb",
+        "vitext": "Tê"
+    },
+    {
+        "id": 100,
+        "entext": "Obesity",
+        "vitext": "Béo phì"
+    },
+    {
+        "id": 101,
+        "entext": "Orthopedics",
+        "vitext": "Chỉnh hình"
+    },
+    {
+        "id": 102,
+        "entext": "Osteoarthritis",
+        "vitext": "Thoái hóa khớp"
+    },
+    {
+        "id": 103,
+        "entext": "Pertussis (Whooping Cough)",
+        "vitext": "Ho gà"
+    },
+    {
+        "id": 104,
+        "entext": "Plague",
+        "vitext": "Bệnh dịch"
+    },
+    {
+        "id": 105,
+        "entext": "Pneumonia",
+        "vitext": "Viêm phổi"
+    },
+    {
+        "id": 106,
+        "entext": "Polycystic ovary syndrome",
+        "vitext": "Đa nang buồng trứng"
+    },
+    {
+        "id": 107,
+        "entext": "Red eye",
+        "vitext": "Mắt đỏ"
+    },
+    {
+        "id": 108,
+        "entext": "Renal cancer",
+        "vitext": "Ung thư thận"
+    },
+    {
+        "id": 109,
+        "entext": "Respiratory Infection",
+        "vitext": "Nhiễm trùng hô hấp"
+    },
+    {
+        "id": 110,
+        "entext": "Retinopathy",
+        "vitext": "Bệnh võng mạc"
+    },
+    {
+        "id": 111,
+        "entext": "Rickets",
+        "vitext": "Còi xương"
+    },
+    {
+        "id": 112,
+        "entext": "Scabies",
+        "vitext": "Ghẻ"
+    },
+    {
+        "id": 113,
+        "entext": "Schizophrenia",
+        "vitext": "Tâm thần phân liệt"
+    },
+    {
+        "id": 114,
+        "entext": "Scoliosis",
+        "vitext": "Cong vẹo cột sống"
+    },
+    {
+        "id": 115,
+        "entext": "Sexually Transmitted Diseases (STDs)",
+        "vitext": "Bệnh hoa liễu"
+    },
+    {
+        "id": 116,
+        "entext": "Sexually transmitted infections (STIs)",
+        "vitext": "Bệnh lây qua đường tình dục"
+    },
+    {
+        "id": 117,
+        "entext": "Shingles",
+        "vitext": "Giời leo"
+    },
+    {
+        "id": 118,
+        "entext": "Sleep apnea",
+        "vitext": "Chứng ngưng thở khi ngủ"
+    },
+    {
+        "id": 119,
+        "entext": "Snoring",
+        "vitext": "Ngáy"
+    },
+    {
+        "id": 120,
+        "entext": "Sore Throat",
+        "vitext": "Đau họng"
+    },
+    {
+        "id": 121,
+        "entext": "Spinal cord injury",
+        "vitext": "Chấn thương tủy sống"
+    },
+    {
+        "id": 122,
+        "entext": "Spondylosis",
+        "vitext": "Gai cột sống"
+    },
+    {
+        "id": 123,
+        "entext": "Stomach Ache",
+        "vitext": "Đau bụng"
+    },
+    {
+        "id": 124,
+        "entext": "Stretch marks",
+        "vitext": "Rạn da"
+    },
+    {
+        "id": 125,
+        "entext": "Stroke",
+        "vitext": "Đột quỵ"
+    },
+    {
+        "id": 126,
+        "entext": "Tetanus",
+        "vitext": "Uốn ván"
+    },
+    {
+        "id": 127,
+        "entext": "Traumatic brain injury",
+        "vitext": "Chấn thương sọ não"
+    },
+    {
+        "id": 128,
+        "entext": "Tuberculosis",
+        "vitext": "Bệnh lao"
+    },
+    {
+        "id": 129,
+        "entext": "Urinary tract infection (UTI)",
+        "vitext": "Nhiễm trùng đường tiểu"
+    },
+    {
+        "id": 130,
+        "entext": "Urine color",
+        "vitext": "Màu nước tiểu"
+    },
+    {
+        "id": 131,
+        "entext": "Vaccination",
+        "vitext": "Vắc xin"
+    },
+    {
+        "id": 132,
+        "entext": "Vaginal bleeding",
+        "vitext": "Chảy máu âm đạo"
+    },
+    {
+        "id": 133,
+        "entext": "Vaginal cancer",
+        "vitext": "Ung thư tử cung"
+    },
+    {
+        "id": 134,
+        "entext": "Vertigo",
+        "vitext": "Chóng mặt"
+    },
+    {
+        "id": 135,
+        "entext": "Vision Impairment",
+        "vitext": "Suy giảm thị lực"
+    },
+    {
+        "id": 136,
+        "entext": "Vomiting",
+        "vitext": "Ói / Nôn mửa"
+    },
+    {
+        "id": 137,
+        "entext": "Vulvar cancer",
+        "vitext": "Ung thư âm đạo"
+    },
+    {
+        "id": 138,
+        "entext": "Weight loss",
+        "vitext": "Giảm cân"
+    },
+    {
+        "id": 139,
+        "entext": "Wisdom teeth",
+        "vitext": "Răng khôn"
+    },
+    {
+        "id": 140,
+        "entext": "Wrinkles",
+        "vitext": "Nếp nhăn"
+    },
+    {
+        "id": 141,
+        "entext": "Wrist pain",
+        "vitext": "Đau cổ tay"
+    },
+    {
+        "id": 142,
+        "entext": "Yeast Infection",
+        "vitext": "Nhiễm khuẩn"
+    },
+    {
+        "id": 143,
+        "entext": "Leg swelling",
+        "vitext": "Sưng chân"
+    },
+    {
+        "id": 144,
+        "entext": "Cramp",
+        "vitext": "Chuột rút"
+    },
+    {
+        "id": 145,
+        "entext": "Sleepwalking",
+        "vitext": "Mộng du"
+    },
+    {
+        "id": 146,
+        "entext": "Runny nose",
+        "vitext": "Sổ mũi"
+    },
+    {
+        "id": 147,
+        "entext": "Stuffy nose (Nasal congestion)",
+        "vitext": "Nghẹt mũi"
+    },
+    {
+        "id": 148,
+        "entext": "Sunburn",
+        "vitext": "Cháy nắng"
+    },
+    {
+        "id": 149,
+        "entext": "Oral thrush",
+        "vitext": "Nấm miệng"
+    },
+    {
+        "id": 150,
+        "entext": "Difficulty swallowing",
+        "vitext": "Khó nuốt"
+    },
+    {
+        "id": 151,
+        "entext": "Hip pain",
+        "vitext": "Đau hông"
+    },
+    {
+        "id": 152,
+        "entext": "Shoulder pain",
+        "vitext": "Đau vai"
+    },
+    {
+        "id": 153,
+        "entext": "Wheezing",
+        "vitext": "Khò khè"
+    },
+    {
+        "id": 154,
+        "entext": "Constipation",
+        "vitext": "Táo bón"
+    }
 ]
